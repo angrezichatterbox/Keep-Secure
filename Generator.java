@@ -1,4 +1,4 @@
-import java.util.Scanner;
+	import java.util.Scanner;
 public class Generator {
 	public static void main(String[] args) {
 		Scanner inp= new Scanner(System.in);
