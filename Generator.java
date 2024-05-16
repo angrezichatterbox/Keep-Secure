@@ -1,12 +1,12 @@
-import java.util.Scanner;
 public class Generator {
-	public static void main(String[] args) {
-		Scanner inp= new Scanner(System.in);
-		System.out.println("How many passwords do you want : ");
-		int total=inp.nextInt();
-		System.out.println("How many characters do you want that password to be : ");
-		int length=inp.nextInt();
-		
+	int total;
+	int length;
+    Generator(int total,int length) {
+		this.total=total;
+		this.length=length;
+    }
+
+	public String[] generatePassword(){
 		String[] randomPasswords=new String[total];
 		for (int i=0;i<total;i++) {
 			String randomPassword="";
@@ -14,9 +14,10 @@ public class Generator {
 				randomPassword+=randomCharacter();
 			}
 			randomPasswords[i]=randomPassword;
-		}
+		}System.out.println("number of passwords given is : ");
+		System.out.println("Length of password is : ");
 		printPasswords(randomPasswords);
-		
+		return randomPasswords;
 	}
 	public static void printPasswords(String[] arr) {
 		for(int i=0;i<arr.length;i++) {
