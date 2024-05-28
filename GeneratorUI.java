@@ -7,7 +7,6 @@ public class GeneratorUI extends JFrame implements ActionListener {
     JPanel panel;
     JLabel user_label, password_label, message;
     JTextField userName_text,password_text;
-    // JPasswordField password_text;
     JButton submit, cancel;
     JTable table;
     DefaultTableModel tableModel;
@@ -70,7 +69,10 @@ public class GeneratorUI extends JFrame implements ActionListener {
                 System.out.println("Number of Passwords: " + numberOfPasswords);
                 System.out.println("Password Length: " + passwordLength);
 
-                Generator generator= new Generator(numberOfPasswords, passwordLength);
+                Generator generator= new Generator();
+                generator.setLength(passwordLength);
+                generator.setTotal(numberOfPasswords);
+
                 String[] passwords= generator.generatePassword();
 
                 tableModel.setRowCount(0);
