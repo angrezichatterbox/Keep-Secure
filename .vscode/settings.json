@@ -1,10 +1,12 @@
 {
   "java.project.sourcePaths": [
     "Encrypt_decrypt/src",
-    "Encrypt_decrypt/lib"
+    "Encrypt_decrypt/lib",
+    "PasswordManagerJava/PasswordManager/src"
   ],
   "java.project.outputPath": "bin",
   "java.project.referencedLibraries": [
-    "lib/**/*.jar"
+    "lib/**/*.jar",
+    "PasswordManagerJava/PasswordManager/lib/org-apache-commons-codec.jar"
   ]
 }

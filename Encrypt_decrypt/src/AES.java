@@ -23,7 +23,7 @@ public class AES {
         cipher.init(Cipher.ENCRYPT_MODE, key);
 
         byte[] encValue = cipher.doFinal(valueToEnc.getBytes());
-        byte[] encryptedByteValue = Base64.encodeBase64(encValue);  // Correct usage of Base64
+        byte[] encryptedByteValue = Base64.encodeBase64(encValue);  
 
         System.out.println("Encrypted Value :: " + new String(encryptedByteValue));
         return new String(encryptedByteValue);
@@ -33,7 +33,7 @@ public class AES {
         Cipher cipher = Cipher.getInstance(ALGORITHM);
         cipher.init(Cipher.DECRYPT_MODE, key);
 
-        byte[] decodedBytes = Base64.decodeBase64(encryptedValue.getBytes());  // Correct usage of Base64
+        byte[] decodedBytes = Base64.decodeBase64(encryptedValue.getBytes());  
 
         byte[] decValue = cipher.doFinal(decodedBytes);
         System.out.println("Decrypted Value :: " + new String(decValue));
