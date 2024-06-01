@@ -41,12 +41,19 @@ public class Generator implements PasswordGenerator {
 
 			// System.out.println("Number of passwords generated: " + total);
 			// System.out.println("Length of each password: " + length);
-
-			printPasswords(randomPasswords);
+			if (randomPasswords.length==1){
+				printPasswords(randomPasswords[0]);
+			} else {
+				printPasswords(randomPasswords);
+			}
 		} catch (Exception e) {
 			System.out.println("An error occurred during password generation: " + e.getMessage());
 		}
 		return randomPasswords;
+	}
+
+	public void printPasswords(String password) {
+		System.out.println(password);
 	}
 
 	public void printPasswords(String[] arr) {
