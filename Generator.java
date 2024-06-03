@@ -39,8 +39,6 @@ public class Generator implements PasswordGenerator {
 				randomPasswords[i] = randomPassword.toString();
 			}
 
-			// System.out.println("Number of passwords generated: " + total);
-			// System.out.println("Length of each password: " + length);
 			if (randomPasswords.length==1){
 				printPasswords(randomPasswords[0]);
 			} else {
