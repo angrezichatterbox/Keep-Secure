@@ -4,6 +4,7 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
 public class GeneratorUI extends JFrame implements ActionListener {
+
     JPanel panel;
     JLabel user_label, password_label, message;
     JTextField userName_text,password_text;
@@ -11,7 +12,8 @@ public class GeneratorUI extends JFrame implements ActionListener {
     JTable table;
     DefaultTableModel tableModel;
 
-    GeneratorUI() {
+    GeneratorUI(PasswordManagerGUI passwordManagerGUI) {
+        
         JPanel topPanel=new JPanel(new GridLayout(1,2));
         user_label = new JLabel();
         user_label.setText("Number of passwords required : ");
@@ -52,7 +54,7 @@ public class GeneratorUI extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new GeneratorUI();
+        new GeneratorUI(null);
     }
 
     @Override
